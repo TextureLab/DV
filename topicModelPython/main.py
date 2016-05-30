@@ -9,9 +9,9 @@ __version__ = "1.0"
 from topicModel.TopicModel import TopicModel
 
 tm = TopicModel(n_topics=30, n_words_per_topic=20, n_iter=2000)
-tm.read_data(data_file_name='data/textsData/rp_stefano_data.json',
-             path=["grants"],
-             id_accessor="grant",
-             text_accessors=["Title", "Summary"])
+tm.read_data(data_file_name='file_data.json',
+             path=["documents"],
+             id_accessor="id",
+             text_accessors=["text"])
 tm.model()
-tm.save_data(file_name='data/topicModels/rp_stefano_topic_model.json')
+tm.save_data(file_name='topic_model.json')

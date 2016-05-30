@@ -87,10 +87,12 @@ You should be able to run the topic modeling only interacting with the *main.py*
 
 The first line :
 >       from topicModel.TopicModel import TopicModel
+
 loads the TopicModel class in the application
 
 Then we create the topic model object :
 >       tm = TopicModel(n_topics=30)
+
 *n_topics* represents the number of topics that will be generated, default value is 20. There are other attributes you
 can specify :
 - *n_words_per_topic*, the number of words per topic, default is 10
@@ -105,6 +107,7 @@ After that we read the file containing the text data :
 >                             path=['documentsArray'],
 >                             id_accessor='docId',
 >                             text_accessors=['text1', 'text2'])
+
 Assumptions :
 - the data file is in json format
 - all documents are stored somewhere in this file in an array
@@ -129,6 +132,7 @@ specify the keys under which to find the document array. For instance if your js
     >               ...
     >           }
     >       }
+
     then the value you should pass to *path* is \[ 'key2', 'subkey1', 'documentArray' \]. Default value is an empty
     array.
 - *id_accessor*, the key to use to access the document id. Default value is 'id'.
@@ -140,11 +144,13 @@ Now we can make the topic model :
 
 And finally save the topic model in a file :
 >       tm.save_data(file_name='topic_model.json')
+
 Again *file_name* is the path to the file relative to the *main.py* script. If you create a dedicated folder (e.g.
 *topicModels* under *data*) don't forget to prepend it before the actual filename.
 
 To execute *main.py* simply, open your terminal, go to the directory containing the script :
 >       $ cd path/to/folder/
+
 and type :
 >       $ python main.py
 

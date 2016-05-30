@@ -68,7 +68,7 @@ class TopicModel:
         topic_model.fit(docs_words_matrix)
         end = time.time()
         elapsed = end - start
-        print('topic modeling done, time elapsed : %s m %s s' % (str(int(elapsed) / 60), str(int(elapsed) % 60)))
+        print('topic modeling done, time elapsed : %s m %s s' % (str(int(elapsed / 60)), str(int(elapsed) % 60)))
 
         print('getting topics')
         for i, topic_dist in enumerate(topic_model.topic_word_):

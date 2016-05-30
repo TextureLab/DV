@@ -95,5 +95,5 @@ def do_lemmatization(texts, stopwords_array=None):
     lemmas = lemmatize(switch_tags_for_lemmatizer_and_clean(tag(remove_stopwords(tokenize(texts), stopwords_array))))
     end = time.time()
     elapsed = end - start
-    print('lemmatization done, time elapsed : %s m %s s' % (str(int(elapsed) / 60), str(int(elapsed) % 60)))
+    print('lemmatization done, time elapsed : %s m %s s' % (str(int(elapsed / 60)), str(int(elapsed) % 60)))
     return lemmas
