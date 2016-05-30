@@ -6,11 +6,13 @@ __author__ = "Pierre Le Bras, Heriot Watt University"
 __license__ = "Creative Commons Attribution 4.0 International License"
 __version__ = "1.0"
 
-from . import lemmatizer
-import numpy as np
 import time
-import lda
 from copy import deepcopy
+
+import lda
+import numpy as np
+
+from . import lemmatizer
 from .TopicsSimilarities import TopicsSimilarities
 from .dataIO import DataReader, DataWriter
 
